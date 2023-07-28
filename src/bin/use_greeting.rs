@@ -1,4 +1,7 @@
-use declarative_macros::greeting;
+// use declarative_macros::greeting;
+#[macro_use]
+extern crate declarative_macros;
+
 use declarative_macros::greeting_macro::greeting;
 
 fn main() {
