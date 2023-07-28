@@ -10,4 +10,9 @@ macro_rules! greeting {
     ($name:literal,$greeting:literal) => {
         greeting($name, $greeting)
     };
+    (test $name:literal) => {{
+        log_syntax!("The name passed to test is ", $name);
+        println!("Returning default greeting");
+        greeting($name, "Hello")
+    }};
 }
